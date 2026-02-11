@@ -34,11 +34,11 @@ export default function ServicesPage() {
                 Every project receives our full attention and commitment to quality.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="tel:+19042405598" className="bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-all">
+                <a href="tel:+19049090916" className="bg-accent hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-all">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  (904) 240-5598
+                  (904) 909-0916
                 </a>
                 <Link href="/contact" className="bg-white/10 hover:bg-white hover:text-secondary text-white font-bold px-8 py-4 rounded-full border-2 border-white transition-all">
                   Get Free Quote
@@ -226,11 +226,11 @@ export default function ServicesPage() {
               Contact us today for a free estimate. We&apos;re excited to help bring your vision to life!
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:+19042405598" className="bg-white text-primary hover:bg-gray-100 font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-colors">
+              <a href="tel:+19049090916" className="bg-white text-accent hover:bg-gray-100 font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-colors">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Call (904) 240-5598
+                Call (904) 909-0916
               </a>
               <Link href="/contact" className="bg-transparent text-white hover:bg-white/10 font-bold px-8 py-4 rounded-full border-2 border-white inline-flex items-center gap-2 transition-colors">
                 Request Quote Online

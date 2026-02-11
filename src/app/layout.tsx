@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Prenga Construction Inc | Quality Home Improvement Services",
   description:
-    "Prenga Construction Inc provides professional residential construction and home improvement services including painting, trim carpentry, pressure washing, flooring, remodeling, and more. Call (904) 240-5598 for a free estimate.",
+    "Prenga Construction Inc provides professional residential construction and home improvement services including painting, trim carpentry, pressure washing, flooring, remodeling, and more. Call (904) 909-0916 for a free estimate.",
   keywords: [
     "construction",
     "home improvement",

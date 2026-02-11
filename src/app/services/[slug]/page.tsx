@@ -36,7 +36,7 @@ const serviceImages: Record<string, string> = {
   'painting': '/images/living-room-renovation.jpg',
   'flooring': '/images/tile-floor-pattern.jpg',
   'bathroom-remodeling': '/images/bathroom-remodel-white.jpg',
-  'kitchen-remodeling': '/images/kitchen-white-cabinets.jpg',
+  'kitchen-remodeling': '/images/living-room-fireplace.jpg',
   'tile-masonry': '/images/shower-dark-tile.jpg',
   'carpentry': '/images/living-room-fireplace.jpg',
   'pressure-washing': '/images/project-2.jpg',
@@ -103,13 +103,13 @@ export default async function ServicePage({ params }: PageProps) {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="tel:+19042405598"
-                  className="bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-all"
+                  href="tel:+19049090916"
+                  className="bg-accent hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-all"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  Call (904) 240-5598
+                  Call (904) 909-0916
                 </a>
                 <Link href="/contact" className="bg-white/10 hover:bg-white hover:text-secondary text-white font-bold px-8 py-4 rounded-full border-2 border-white transition-all">
                   Get Free Estimate
@@ -176,13 +176,13 @@ export default async function ServicePage({ params }: PageProps) {
                   </p>
                   <div className="space-y-3">
                     <a
-                      href="tel:+19042405598"
-                      className="flex items-center justify-center gap-2 bg-white text-primary hover:bg-gray-100 px-6 py-4 rounded-xl font-bold transition-colors w-full"
+                      href="tel:+19049090916"
+                      className="flex items-center justify-center gap-2 bg-white text-accent hover:bg-gray-100 px-6 py-4 rounded-xl font-bold transition-colors w-full"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      (904) 240-5598
+                      (904) 909-0916
                     </a>
                     <Link
                       href="/contact"
@@ -234,7 +234,7 @@ export default async function ServicePage({ params }: PageProps) {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image src="/images/shower-bench-tile.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/shower-marble-progress.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden">
                     <Image src="/images/bathroom-marble-shower.jpg" alt="Our work" fill className="object-cover" />
@@ -379,11 +379,11 @@ export default async function ServicePage({ params }: PageProps) {
               Contact us today for a free, no-obligation estimate. Let&apos;s bring your vision to life!
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:+19042405598" className="bg-white text-primary hover:bg-gray-100 font-bold px-10 py-5 rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-lg">
+              <a href="tel:+19049090916" className="bg-white text-accent hover:bg-gray-100 font-bold px-10 py-5 rounded-full inline-flex items-center gap-3 transition-all hover:scale-105 shadow-lg">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Call (904) 240-5598
+                Call (904) 909-0916
               </a>
               <Link href="/contact" className="bg-transparent text-white hover:bg-white/10 font-bold px-10 py-5 rounded-full border-2 border-white inline-flex items-center gap-2 transition-all">
                 Get a Free Quote

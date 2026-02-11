@@ -94,7 +94,7 @@ export default function Home() {
                     </select>
                     <button
                       type="submit"
-                      className="bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-xl transition-colors whitespace-nowrap"
+                      className="bg-accent hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-colors whitespace-nowrap"
                     >
                       Get Started
                     </button>
@@ -121,19 +121,19 @@ export default function Home() {
               {/* Trust Indicators */}
               <div className="flex flex-wrap gap-6 mt-8 text-white/80 text-sm">
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   Licensed & Insured
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   15+ Years Experience
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   Free Estimates
@@ -151,7 +151,7 @@ export default function Home() {
                 <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
-                  className="bg-gray-50 hover:bg-primary hover:text-white px-5 py-3 rounded-full text-secondary font-medium transition-all"
+                  className="bg-gray-50 hover:bg-accent hover:text-white px-5 py-3 rounded-full text-secondary font-medium transition-all"
                 >
                   {service.name}
                 </Link>
@@ -187,7 +187,7 @@ export default function Home() {
                 >
                   <div className="relative h-48">
                     <Image
-                      src={`/images/${i === 0 ? 'bathroom-remodel-white.jpg' : i === 1 ? 'living-room-renovation.jpg' : i === 2 ? 'tile-floor-pattern.jpg' : i === 3 ? 'kitchen-white-cabinets.jpg' : i === 4 ? 'shower-dark-tile.jpg' : 'project-3.jpg'}`}
+                      src={`/images/${i === 0 ? 'bathroom-remodel-white.jpg' : i === 1 ? 'living-room-renovation.jpg' : i === 2 ? 'tile-floor-pattern.jpg' : i === 3 ? 'living-room-fireplace.jpg' : i === 4 ? 'shower-dark-tile.jpg' : 'project-3.jpg'}`}
                       alt={service.category}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -362,7 +362,7 @@ export default function Home() {
                     <Image src="/images/bathroom-remodel-white.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
-                    <Image src="/images/shower-bench-tile.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/shower-marble-progress.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                 </div>
                 <div className="absolute -bottom-4 left-4 bg-white p-4 rounded-xl shadow-xl">
@@ -457,13 +457,13 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
-                  href="tel:+19042405598"
-                  className="bg-white hover:bg-gray-100 text-primary font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-all"
+                  href="tel:+19049090916"
+                  className="bg-white hover:bg-gray-100 text-accent font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition-all"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  (904) 240-5598
+                  (904) 909-0916
                 </a>
                 <Link
                   href="/contact"
