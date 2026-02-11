@@ -1,5 +1,3 @@
-cd 'use client';
-
 import { useState, FormEvent } from 'react';
 import { servicesData } from '@/data/services';
 
