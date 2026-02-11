@@ -89,7 +89,7 @@ export default function Header() {
                     {servicesData.map((service) => (
                       <Link
                         key={service.id}
-                        href={`/services/${service.slug}`}
+                        href={`/${service.slug}`}
                         className="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
                         onClick={() => setServicesOpen(false)}
                       >
@@ -225,7 +225,7 @@ export default function Header() {
                   {servicesData.slice(0, 8).map((service) => (
                     <Link
                       key={service.id}
-                      href={`/services/${service.slug}`}
+                      href={`/${service.slug}`}
                       className="block py-2.5 px-4 text-gray-600 hover:text-primary text-sm"
                       onClick={() => setIsMenuOpen(false)}
                     >

@@ -81,7 +81,7 @@ export default function Hero() {
             {servicesData.map((service, index) => (
               <Link
                 key={service.id}
-                href={`/services/${service.slug}`}
+                href={`/${service.slug}`}
                 className="group bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 rounded-lg p-4 transition-all duration-300 text-center"
                 style={{ animationDelay: `${0.5 + index * 0.05}s` }}
               >

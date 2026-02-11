@@ -73,7 +73,7 @@ export default function Services() {
 
                 {/* CTA */}
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={`/${service.slug}`}
                   className={`inline-flex items-center gap-2 font-semibold text-sm transition-all ${
                     activeCategory === service.id
                       ? 'text-primary'

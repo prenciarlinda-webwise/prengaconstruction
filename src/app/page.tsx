@@ -24,7 +24,7 @@ export default function Home() {
   const handleServiceSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedService) {
-      router.push(`/services/${selectedService}`);
+      router.push(`/${selectedService}`);
     } else {
       router.push('/services');
     }
@@ -108,7 +108,7 @@ export default function Home() {
                     {['Bathroom Remodel', 'Painting', 'Flooring', 'Tile Work'].map((service) => (
                       <Link
                         key={service}
-                        href={`/services/${service.toLowerCase().replace(' ', '-')}`}
+                        href={`/${service.toLowerCase().replace(' ', '-')}`}
                         className="text-primary text-sm hover:underline"
                       >
                         {service}
@@ -150,7 +150,7 @@ export default function Home() {
               {popularServices.map((service) => (
                 <Link
                   key={service.slug}
-                  href={`/services/${service.slug}`}
+                  href={`/${service.slug}`}
                   className="bg-gray-50 hover:bg-accent hover:text-white px-5 py-3 rounded-full text-secondary font-medium transition-all"
                 >
                   {service.name}
@@ -182,7 +182,7 @@ export default function Home() {
               {servicesData.slice(0, 6).map((service, i) => (
                 <Link
                   key={service.id}
-                  href={`/services/${service.slug}`}
+                  href={`/${service.slug}`}
                   className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group"
                 >
                   <div className="relative h-48">

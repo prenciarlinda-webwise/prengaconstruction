@@ -342,7 +342,7 @@ export default async function ServicePage({ params }: PageProps) {
               {otherServices.map((otherService) => (
                 <Link
                   key={otherService.id}
-                  href={`/services/${otherService.slug}`}
+                  href={`/${otherService.slug}`}
                   className="group bg-gray-50 hover:bg-white rounded-2xl p-6 border-2 border-transparent hover:border-primary hover:shadow-xl transition-all"
                 >
                   <h3 className="text-xl font-bold text-secondary group-hover:text-primary mb-3 transition-colors">
