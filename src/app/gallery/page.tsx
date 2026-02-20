@@ -7,39 +7,74 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const galleryImages = [
-  { src: 'living-room-fireplace.jpg', category: 'Remodeling', title: 'Living Room Transformation' },
-  { src: 'bathroom-remodel-white.jpg', category: 'Bathroom', title: 'Modern White Bathroom' },
-  { src: 'shower-glass-door.jpg', category: 'Bathroom', title: 'Glass Shower Enclosure' },
-  { src: 'marble-shower-bench.jpg', category: 'Bathroom', title: 'Marble Shower with Bench' },
-  { src: 'bathroom-herringbone.jpg', category: 'Bathroom', title: 'Herringbone Tile Design' },
-  { src: 'shower-dark-tile.jpg', category: 'Tile', title: 'Dark Tile Shower' },
-  { src: 'shower-gray-tile.jpg', category: 'Tile', title: 'Gray Tile Installation' },
-  { src: 'tile-floor-pattern.jpg', category: 'Flooring', title: 'Decorative Floor Pattern' },
-  { src: 'tile-floor-greek.jpg', category: 'Flooring', title: 'Greek Key Floor Design' },
-  { src: 'bathroom-marble-shower.jpg', category: 'Bathroom', title: 'Luxury Marble Shower' },
-  { src: 'shower-marble-progress.jpg', category: 'Bathroom', title: 'Shower Remodel Progress' },
-  { src: 'living-room-renovation.jpg', category: 'Remodeling', title: 'Complete Room Renovation' },
-  { src: 'bathroom-work-1.jpg', category: 'Bathroom', title: 'Bathroom Project' },
-  { src: 'bathroom-work-2.jpg', category: 'Bathroom', title: 'Custom Vanity Install' },
-  { src: 'bathroom-work-3.jpg', category: 'Bathroom', title: 'Shower Tile Work' },
-  { src: 'bathroom-work-4.jpg', category: 'Bathroom', title: 'Modern Bathroom Update' },
-  { src: 'bathroom-work-5.jpg', category: 'Bathroom', title: 'Complete Bath Remodel' },
-  { src: 'project-1.jpg', category: 'Tile', title: 'Custom Tile Project' },
-  { src: 'project-2.jpg', category: 'Remodeling', title: 'Home Improvement' },
-  { src: 'project-3.jpg', category: 'Remodeling', title: 'Interior Update' },
-  { src: 'project-4.jpg', category: 'Tile', title: 'Tile Installation' },
-  { src: 'project-5.jpg', category: 'Bathroom', title: 'Bathroom Refresh' },
-  { src: 'project-6.jpg', category: 'Remodeling', title: 'Room Transformation' },
-  { src: 'project-7.jpg', category: 'Bathroom', title: 'Spa-Style Bathroom' },
-  { src: 'project-8.jpg', category: 'Tile', title: 'Precision Tile Work' },
-  { src: 'project-9.jpg', category: 'Bathroom', title: 'Contemporary Bath' },
-  { src: 'project-10.jpg', category: 'Remodeling', title: 'Full Renovation' },
-  { src: 'project-11.jpg', category: 'Tile', title: 'Tile Accent Wall' },
-  { src: 'project-12.jpg', category: 'Bathroom', title: 'Master Bath Upgrade' },
-  { src: 'project-13.jpg', category: 'Remodeling', title: 'Complete Remodel' },
+  // Remodeling - Bathroom
+  { src: 'bathroom-remodel/bathroom-remodel-white.jpg', category: 'Remodeling', title: 'Modern White Bathroom Remodel' },
+  { src: 'bathroom-remodel/shower-glass-door.jpg', category: 'Remodeling', title: 'Glass Shower Enclosure' },
+  { src: 'bathroom-remodel/marble-shower-bench.jpg', category: 'Remodeling', title: 'Marble Shower with Bench' },
+  { src: 'bathroom-remodel/bathroom-herringbone.jpg', category: 'Remodeling', title: 'Herringbone Tile Bathroom' },
+  { src: 'bathroom-remodel/bathroom-marble-shower.jpg', category: 'Remodeling', title: 'Luxury Marble Shower' },
+  { src: 'bathroom-remodel/bathroom-walkin-shower-marble-shelves.jpg', category: 'Remodeling', title: 'Walk-In Shower with Marble Shelves' },
+  { src: 'bathroom-remodel/bathroom-marble-shower-gold-fixtures.jpg', category: 'Remodeling', title: 'Marble Shower with Gold Fixtures' },
+  { src: 'bathroom-remodel/bathroom-natural-stone-shower-install.jpg', category: 'Remodeling', title: 'Natural Stone Shower Install' },
+  { src: 'bathroom-remodel/bathroom-modern-vanity-glass-shower.jpg', category: 'Remodeling', title: 'Modern Vanity & Glass Shower' },
+  { src: 'bathroom-remodel/bathroom-shower-tile-niche-window.jpg', category: 'Remodeling', title: 'Shower Tile with Niche & Window' },
+  { src: 'bathroom-remodel/bathroom-luxury-stone-walkin-shower.jpg', category: 'Remodeling', title: 'Luxury Stone Walk-In Shower' },
+  { src: 'bathroom-remodel/bathroom-master-calacatta-shower.jpg', category: 'Remodeling', title: 'Master Bath Calacatta Shower' },
+  { src: 'bathroom-remodel/bathroom-gray-marble-shower-niche.jpg', category: 'Remodeling', title: 'Gray Marble Shower with Niche' },
+  { src: 'bathroom-remodel/bathroom-master-freestanding-tub.jpg', category: 'Remodeling', title: 'Master Bath with Freestanding Tub' },
+  { src: 'bathroom-remodel/bathroom-shower-bench-mosaic-floor.jpg', category: 'Remodeling', title: 'Shower Bench & Mosaic Floor' },
+  { src: 'bathroom-remodel/bathroom-modern-glass-tile-shower.jpg', category: 'Remodeling', title: 'Modern Glass Tile Shower' },
+  { src: 'bathroom-remodel/bathroom-luxury-herringbone-accent.jpg', category: 'Remodeling', title: 'Luxury Herringbone Accent Bathroom' },
+  { src: 'bathroom-remodel/bathroom-gray-tile-shower-bench.jpg', category: 'Remodeling', title: 'Gray Tile Shower with Bench' },
+  { src: 'bathroom-remodel/bathroom-modern-vanity-pendant-light.jpg', category: 'Remodeling', title: 'Modern Vanity with Pendant Light' },
+  { src: 'bathroom-remodel/bathroom-black-star-tile-shower.jpg', category: 'Remodeling', title: 'Black Star Tile Shower' },
+  { src: 'bathroom-remodel/bathroom-black-tile-pendant-vanity.jpg', category: 'Remodeling', title: 'Black Tile Shower & Pendant Vanity' },
+  { src: 'bathroom-remodel/bathroom-black-herringbone-glass-tub.jpg', category: 'Remodeling', title: 'Black Herringbone Shower & Glass Tub' },
+  { src: 'bathroom-remodel/bathroom-striped-penny-tile-tub.jpg', category: 'Remodeling', title: 'Striped Penny Tile Bathtub' },
+  { src: 'bathroom-remodel/bathroom-vertical-tile-glass-door.jpg', category: 'Remodeling', title: 'Vertical Tile Shower & Glass Door' },
+  // Remodeling - Home & Kitchen
+  { src: 'home-remodeling/living-room-fireplace.jpg', category: 'Remodeling', title: 'Living Room Transformation' },
+  { src: 'home-remodeling/living-room-renovation.jpg', category: 'Remodeling', title: 'Complete Room Renovation' },
+  { src: 'home-remodeling/home-remodel-living-room-brick-wall.jpg', category: 'Remodeling', title: 'Living Room with Brick Accent Wall' },
+  { src: 'home-remodeling/kitchen-remodel/kitchen-remodel-black-cabinets-island.jpg', category: 'Remodeling', title: 'Modern Kitchen with Black Cabinets' },
+  { src: 'home-remodeling/kitchen-remodel/kitchen-modern-wet-bar-marble.jpg', category: 'Remodeling', title: 'Modern Wet Bar with Marble' },
+  // Tile & Flooring
+  { src: 'tile/tile-floor-pattern.jpg', category: 'Tile', title: 'Decorative Floor Pattern' },
+  { src: 'tile/tile-floor-greek.jpg', category: 'Tile', title: 'Greek Key Floor Design' },
+  // Drywall
+  { src: 'drywall/drywall-custom-ceiling-led-design.jpg', category: 'Drywall', title: 'Custom Ceiling with LED Design' },
+  { src: 'drywall/drywall-arched-hallway-vaulted.jpg', category: 'Drywall', title: 'Arched Hallway with Vaulted Ceiling' },
+  { src: 'drywall/drywall-ceiling-floral-room-divider.jpg', category: 'Drywall', title: 'Floral Ceiling & Room Divider' },
+  { src: 'drywall/drywall-ornate-dome-ceiling.jpg', category: 'Drywall', title: 'Ornate Dome Ceiling' },
+  { src: 'drywall/drywall-ceiling-taping-finish.jpg', category: 'Drywall', title: 'Ceiling Taping & Finish' },
+  { src: 'drywall/drywall-wave-wall-detail.jpg', category: 'Drywall', title: 'Wave Wall Detail' },
+  // Trim & Carpentry
+  { src: 'trim-carpentry/trim-custom-office-coffered-ceiling.jpg', category: 'Carpentry', title: 'Custom Office with Coffered Ceiling' },
+  { src: 'trim-carpentry/trim-custom-pantry-wine-rack.jpg', category: 'Carpentry', title: 'Custom Pantry & Wine Rack' },
+  { src: 'trim-carpentry/trim-coffered-ceiling-accent-wall.jpg', category: 'Carpentry', title: 'Coffered Ceiling & Accent Wall' },
+  { src: 'trim-carpentry/trim-coffered-ceiling-stone-fireplace.jpg', category: 'Carpentry', title: 'Coffered Ceiling & Stone Fireplace' },
+  { src: 'trim-carpentry/trim-diamond-accent-wall-pink.jpg', category: 'Carpentry', title: 'Diamond Accent Wall' },
+  { src: 'trim-carpentry/trim-wainscoting-coffered-office.jpg', category: 'Carpentry', title: 'Wainscoting & Coffered Office' },
+  { src: 'trim-carpentry/trim-geometric-accent-wall-navy.jpg', category: 'Carpentry', title: 'Geometric Accent Wall' },
+  { src: 'trim-carpentry/trim-geometric-accent-wet-bar.jpg', category: 'Carpentry', title: 'Geometric Accent Wet Bar' },
+  { src: 'trim-carpentry/trim-wainscoting-staircase.jpg', category: 'Carpentry', title: 'Wainscoting & Staircase' },
+  { src: 'trim-carpentry/trim-coffered-ceiling-recessed-lights.jpg', category: 'Carpentry', title: 'Coffered Ceiling with Recessed Lights' },
+  { src: 'trim-carpentry/trim-board-batten-accent-wall-blue.jpg', category: 'Carpentry', title: 'Board & Batten Accent Wall' },
+  // Painting - finalized images only (no before/after/in-progress)
+  { src: 'interior-painting/interior-painting-vaulted-living-room-after.jpeg', category: 'Painting', title: 'Vaulted Living Room - Professional Finish' },
+  { src: 'interior-painting/interior-painting-bedroom-navy-blue-walls.jpeg', category: 'Painting', title: 'Navy Blue Bedroom Walls' },
+  { src: 'interior-painting/interior-painting-room-sage-green-walls-white-trim.jpeg', category: 'Painting', title: 'Sage Green Walls with White Trim' },
+  { src: 'interior-painting/interior-painting-restaurant-sage-green-wainscoting.jpeg', category: 'Painting', title: 'Commercial Sage Green Wainscoting' },
+  { src: 'interior-painting/interior-painting-restaurant-wainscoting-seating-area.jpeg', category: 'Painting', title: 'Restaurant Wainscoting Seating Area' },
+  { src: 'interior-painting/interior-painting-bedroom-warm-beige-walls.jpeg', category: 'Painting', title: 'Warm Beige Bedroom Walls' },
+  { src: 'interior-painting/interior-painting-bedroom-sage-green-walls-closet.jpeg', category: 'Painting', title: 'Sage Green Walls & Closet' },
+  { src: 'interior-painting/interior-painting-commercial-hallway-gray-walls.jpeg', category: 'Painting', title: 'Commercial Hallway Gray Walls' },
+  { src: 'interior-painting/interior-painting-room-light-blue-walls-crown-molding.jpeg', category: 'Painting', title: 'Light Blue Walls with Crown Molding' },
+  { src: 'exterior-painting/exterior-painting-commercial-building-after.jpeg', category: 'Painting', title: 'Commercial Building Exterior' },
+  { src: 'exterior-painting/exterior-painting-yellow-siding-home-backyard.jpeg', category: 'Painting', title: 'Yellow Siding Home Backyard' },
 ];
 
-const categories = ['All', 'Bathroom', 'Tile', 'Flooring', 'Remodeling'];
+const categories = ['All', 'Remodeling', 'Drywall', 'Carpentry', 'Painting', 'Tile'];
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -55,7 +90,7 @@ export default function GalleryPage() {
         {/* Hero */}
         <section className="relative pt-24 pb-20 overflow-hidden">
           <div className="absolute inset-0">
-            <Image src="/images/marble-shower-bench.jpg" alt="Our work" fill className="object-cover" />
+            <Image src="/images/bathroom-remodel/marble-shower-bench.jpg" alt="Our work" fill className="object-cover" />
             <div className="absolute inset-0 bg-secondary/85" />
           </div>
           <div className="relative z-10 container-max px-4 md:px-6 pt-16">
@@ -155,7 +190,7 @@ export default function GalleryPage() {
               {/* Featured Project 1 */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
                 <div className="relative h-80">
-                  <Image src="/images/bathroom-remodel-white.jpg" alt="Bathroom transformation" fill className="object-cover" />
+                  <Image src="/images/bathroom-remodel/bathroom-remodel-white.jpg" alt="Bathroom transformation" fill className="object-cover" />
                 </div>
                 <div className="p-8">
                   <span className="text-primary font-semibold text-sm">Bathroom Remodel</span>
@@ -174,7 +209,7 @@ export default function GalleryPage() {
               {/* Featured Project 2 */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
                 <div className="relative h-80">
-                  <Image src="/images/living-room-fireplace.jpg" alt="Living room renovation" fill className="object-cover" />
+                  <Image src="/images/home-remodeling/living-room-fireplace.jpg" alt="Living room renovation" fill className="object-cover" />
                 </div>
                 <div className="p-8">
                   <span className="text-primary font-semibold text-sm">Full Remodel</span>

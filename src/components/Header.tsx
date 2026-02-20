@@ -155,6 +155,9 @@ export default function Header() {
             <Link href="/gallery" className="text-gray-700 hover:text-primary font-medium transition-colors">
               Our Work
             </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              Blog
+            </Link>
             <Link href="/about" className="text-gray-700 hover:text-primary font-medium transition-colors">
               About
             </Link>
@@ -284,6 +287,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Our Work
+            </Link>
+            <Link
+              href="/blog"
+              className="text-gray-700 hover:text-primary hover:bg-gray-50 font-medium py-3 px-4 rounded-lg transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </Link>
             <Link
               href="/about"

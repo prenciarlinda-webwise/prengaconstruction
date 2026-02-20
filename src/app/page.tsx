@@ -9,12 +9,12 @@ import Footer from '@/components/Footer';
 import { servicesData } from '@/data/services';
 
 const popularServices = [
-  { name: 'Bathroom Remodel', slug: 'bathroom-remodeling' },
+  { name: 'Remodeling', slug: 'remodeling' },
   { name: 'Painting', slug: 'painting' },
   { name: 'Flooring', slug: 'flooring' },
-  { name: 'Kitchen Remodel', slug: 'kitchen-remodeling' },
   { name: 'Tile Work', slug: 'tile-masonry' },
   { name: 'Carpentry', slug: 'carpentry' },
+  { name: 'Drywall', slug: 'drywall' },
 ];
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
         <section className="relative min-h-[90vh] flex items-center">
           <div className="absolute inset-0">
             <Image
-              src="/images/living-room-fireplace.jpg"
+              src="/images/home-remodeling/living-room-fireplace.jpg"
               alt="Beautiful home renovation"
               fill
               className="object-cover"
@@ -105,13 +105,18 @@ export default function Home() {
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   <span className="text-gray-500 text-sm">Popular:</span>
                   <div className="flex flex-wrap gap-2 mt-2">
-                    {['Bathroom Remodel', 'Painting', 'Flooring', 'Tile Work'].map((service) => (
+                    {[
+                      { name: 'Remodeling', slug: 'remodeling' },
+                      { name: 'Painting', slug: 'painting' },
+                      { name: 'Flooring', slug: 'flooring' },
+                      { name: 'Tile Work', slug: 'tile-masonry' },
+                    ].map((service) => (
                       <Link
-                        key={service}
-                        href={`/${service.toLowerCase().replace(' ', '-')}`}
+                        key={service.slug}
+                        href={`/${service.slug}`}
                         className="text-primary text-sm hover:underline"
                       >
-                        {service}
+                        {service.name}
                       </Link>
                     ))}
                   </div>
@@ -187,7 +192,7 @@ export default function Home() {
                 >
                   <div className="relative h-48">
                     <Image
-                      src={`/images/${i === 0 ? 'bathroom-remodel-white.jpg' : i === 1 ? 'living-room-renovation.jpg' : i === 2 ? 'tile-floor-pattern.jpg' : i === 3 ? 'living-room-fireplace.jpg' : i === 4 ? 'shower-dark-tile.jpg' : 'project-3.jpg'}`}
+                      src={`/images/${i === 0 ? 'interior-painting/interior-painting-vaulted-living-room-after.jpeg' : i === 1 ? 'tile/tile-floor-pattern.jpg' : i === 2 ? 'trim-carpentry/trim-coffered-ceiling-stone-fireplace.jpg' : i === 3 ? 'drywall/drywall-custom-ceiling-led-design.jpg' : i === 4 ? 'tile/tile-floor-greek.jpg' : 'bathroom-remodel/bathroom-remodel-white.jpg'}`}
                       alt={service.category}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -294,14 +299,14 @@ export default function Home() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { img: 'marble-shower-bench.jpg', label: 'Bathroom' },
-                { img: 'bathroom-herringbone.jpg', label: 'Tile Work' },
-                { img: 'tile-floor-pattern.jpg', label: 'Flooring' },
-                { img: 'shower-glass-door.jpg', label: 'Shower' },
-                { img: 'living-room-renovation.jpg', label: 'Remodel' },
-                { img: 'bathroom-remodel-white.jpg', label: 'Bathroom' },
-                { img: 'shower-dark-tile.jpg', label: 'Tile' },
-                { img: 'tile-floor-greek.jpg', label: 'Flooring' },
+                { img: 'bathroom-remodel/marble-shower-bench.jpg', label: 'Remodeling' },
+                { img: 'bathroom-remodel/bathroom-herringbone.jpg', label: 'Remodeling' },
+                { img: 'tile/tile-floor-pattern.jpg', label: 'Flooring' },
+                { img: 'trim-carpentry/trim-coffered-ceiling-stone-fireplace.jpg', label: 'Carpentry' },
+                { img: 'home-remodeling/living-room-renovation.jpg', label: 'Remodeling' },
+                { img: 'drywall/drywall-custom-ceiling-led-design.jpg', label: 'Drywall' },
+                { img: 'interior-painting/interior-painting-bedroom-navy-blue-walls.jpeg', label: 'Painting' },
+                { img: 'tile/tile-floor-greek.jpg', label: 'Flooring' },
               ].map((project, i) => (
                 <Link
                   key={i}
@@ -359,10 +364,10 @@ export default function Home() {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative h-64 rounded-2xl overflow-hidden">
-                    <Image src="/images/bathroom-remodel-white.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/bathroom-remodel/bathroom-remodel-white.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
-                    <Image src="/images/shower-marble-progress.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/trim-carpentry/trim-coffered-ceiling-accent-wall.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                 </div>
                 <div className="absolute -bottom-4 left-4 bg-white p-4 rounded-xl shadow-xl">

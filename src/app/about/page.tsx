@@ -17,7 +17,7 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="relative pt-24 pb-32 overflow-hidden">
           <div className="absolute inset-0">
-            <Image src="/images/living-room-fireplace.jpg" alt="Our work" fill className="object-cover" />
+            <Image src="/images/home-remodeling/living-room-fireplace.jpg" alt="Our work" fill className="object-cover" />
             <div className="absolute inset-0 bg-secondary/80" />
           </div>
           <div className="relative z-10 container-max px-4 md:px-6 pt-16">
@@ -92,7 +92,7 @@ export default function AboutPage() {
               </div>
               <div className="relative">
                 <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-                  <Image src="/images/bathroom-remodel-white.jpg" alt="Quality craftsmanship" fill className="object-cover" />
+                  <Image src="/images/bathroom-remodel/bathroom-remodel-white.jpg" alt="Quality craftsmanship" fill className="object-cover" />
                 </div>
                 <div className="absolute -bottom-8 -left-8 bg-primary text-white p-8 rounded-2xl shadow-xl">
                   <div className="text-5xl font-black">15+</div>
@@ -173,18 +173,18 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image src="/images/marble-shower-bench.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/bathroom-remodel/marble-shower-bench.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden">
-                    <Image src="/images/bathroom-herringbone.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/bathroom-remodel/bathroom-herringbone.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="relative h-64 rounded-2xl overflow-hidden">
-                    <Image src="/images/tile-floor-pattern.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/tile/tile-floor-pattern.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                   <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image src="/images/shower-dark-tile.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/bathroom-remodel/shower-dark-tile.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                 </div>
               </div>

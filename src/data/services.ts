@@ -5,6 +5,7 @@ export interface Service {
   description: string;
   services: string[];
   features?: string[];
+  hasImages?: boolean;
 }
 
 export const servicesData: Service[] = [
@@ -28,6 +29,7 @@ export const servicesData: Service[] = [
       'Clean and professional work',
       'Color consultation available',
     ],
+    hasImages: true,
   },
   {
     id: 'flooring',
@@ -49,6 +51,7 @@ export const servicesData: Service[] = [
       'Subfloor assessment included',
       'Proper acclimation process',
     ],
+    hasImages: true,
   },
   {
     id: 'carpentry',
@@ -70,6 +73,7 @@ export const servicesData: Service[] = [
       'Quality materials',
       'Attention to detail',
     ],
+    hasImages: true,
   },
   {
     id: 'drywall',
@@ -90,68 +94,7 @@ export const servicesData: Service[] = [
       'Dust containment',
       'Level 5 finish available',
     ],
-  },
-  {
-    id: 'doors-windows',
-    category: 'Doors & Windows',
-    slug: 'doors-windows',
-    description: 'Enhance your home\'s appearance and energy efficiency with professional door and window installation services.',
-    services: [
-      'Interior door installation',
-      'Exterior door installation',
-      'Window replacement',
-      'Sliding doors',
-      'French doors',
-      'Hardware installation',
-    ],
-    features: [
-      'Energy-efficient options',
-      'Proper sealing & insulation',
-      'Security upgrades',
-      'Style consultations',
-    ],
-  },
-  {
-    id: 'bathroom',
-    category: 'Bathroom Remodeling',
-    slug: 'bathroom-remodeling',
-    description: 'Create your dream bathroom with our comprehensive remodeling services. From simple updates to complete transformations.',
-    services: [
-      'Full bathroom remodel',
-      'Shower & tub installation',
-      'Tile work (walls & floors)',
-      'Vanity installation',
-      'Toilet installation',
-      'Bathroom drywall & painting',
-      'Waterproofing',
-    ],
-    features: [
-      'Design assistance',
-      'Quality fixtures',
-      'Proper waterproofing',
-      'Code-compliant work',
-    ],
-  },
-  {
-    id: 'kitchen',
-    category: 'Kitchen Remodeling',
-    slug: 'kitchen-remodeling',
-    description: 'Transform the heart of your home with our kitchen remodeling expertise. We bring functionality and style together.',
-    services: [
-      'Full kitchen remodel',
-      'Cabinet installation',
-      'Countertop installation',
-      'Backsplash tile',
-      'Appliance installation',
-      'Kitchen flooring',
-      'Lighting upgrades',
-    ],
-    features: [
-      'Custom cabinet options',
-      'Countertop selection',
-      'Layout optimization',
-      'Modern upgrades',
-    ],
+    hasImages: true,
   },
   {
     id: 'tile-masonry',
@@ -172,25 +115,56 @@ export const servicesData: Service[] = [
       'Waterproof systems',
       'Long-lasting results',
     ],
+    hasImages: true,
   },
   {
     id: 'remodeling',
-    category: 'Remodeling & Renovations',
+    category: 'Remodeling',
     slug: 'remodeling',
-    description: 'Complete home renovation services to modernize your space. We handle projects of all sizes with careful planning and execution.',
+    description: 'Complete remodeling services for your entire home — kitchens, bathrooms, living spaces, and more. We handle projects of all sizes with careful planning and expert execution.',
     services: [
+      'Full bathroom remodel',
+      'Full kitchen remodel',
       'Whole house renovations',
+      'Shower & tub installation',
+      'Cabinet & countertop installation',
+      'Vanity & fixture installation',
       'Room additions',
+      'Open-concept conversions',
+      'Backsplash tile',
+      'Waterproofing',
       'Garage conversions',
       'Basement finishing',
-      'Attic renovations',
-      'Open-concept conversions',
     ],
     features: [
+      'Design assistance',
       'Project management',
-      'Design planning',
       'Permit assistance',
-      'Quality craftsmanship',
+      'Quality fixtures & materials',
+      'Code-compliant work',
+      'Proper waterproofing',
+    ],
+    hasImages: true,
+  },
+  // Services below do NOT have their own images yet - show only in link/text areas
+  {
+    id: 'doors-windows',
+    category: 'Doors & Windows',
+    slug: 'doors-windows',
+    description: 'Enhance your home\'s appearance and energy efficiency with professional door and window installation services.',
+    services: [
+      'Interior door installation',
+      'Exterior door installation',
+      'Window replacement',
+      'Sliding doors',
+      'French doors',
+      'Hardware installation',
+    ],
+    features: [
+      'Energy-efficient options',
+      'Proper sealing & insulation',
+      'Security upgrades',
+      'Style consultations',
     ],
   },
   {
@@ -294,5 +268,14 @@ export const servicesData: Service[] = [
   },
 ];
 
-export const mainServices = servicesData.slice(0, 7);
-export const additionalServices = servicesData.slice(7);
+// Services with images - shown with image boxes on homepage, services page, gallery
+export const servicesWithImages = servicesData.filter((s) => s.hasImages);
+
+// Services without images - shown only as links/text
+export const servicesWithoutImages = servicesData.filter((s) => !s.hasImages);
+
+// First 8 services (all have images) for prominent display
+export const mainServices = servicesWithImages;
+
+// Additional services (no images) for text-only sections
+export const additionalServices = servicesWithoutImages;

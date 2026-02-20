@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { servicesData } from '@/data/services';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ImageSlider from '@/components/ImageSlider';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -31,22 +32,104 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-// Map service categories to images
+// Hero images per service - one representative image
 const serviceImages: Record<string, string> = {
-  'painting': '/images/living-room-renovation.jpg',
-  'flooring': '/images/tile-floor-pattern.jpg',
-  'bathroom-remodeling': '/images/bathroom-remodel-white.jpg',
-  'kitchen-remodeling': '/images/living-room-fireplace.jpg',
-  'tile-masonry': '/images/shower-dark-tile.jpg',
-  'carpentry': '/images/living-room-fireplace.jpg',
-  'pressure-washing': '/images/project-2.jpg',
-  'drywall': '/images/living-room-renovation.jpg',
-  'doors-windows': '/images/project-3.jpg',
-  'electrical-plumbing': '/images/bathroom-work-4.jpg',
-  'deck-fence': '/images/project-6.jpg',
-  'demolition': '/images/project-10.jpg',
-  'general-construction': '/images/project-13.jpg',
-  'handyman': '/images/project-2.jpg',
+  'painting': '/images/interior-painting/interior-painting-vaulted-living-room-after.jpeg',
+  'flooring': '/images/tile/tile-floor-pattern.jpg',
+  'tile-masonry': '/images/tile/tile-floor-greek.jpg',
+  'carpentry': '/images/trim-carpentry/trim-coffered-ceiling-stone-fireplace.jpg',
+  'drywall': '/images/drywall/drywall-custom-ceiling-led-design.jpg',
+  'remodeling': '/images/bathroom-remodel/bathroom-remodel-white.jpg',
+  'doors-windows': '/images/home-remodeling/living-room-fireplace.jpg',
+  'exterior': '/images/home-remodeling/home-remodel-living-room-brick-wall.jpg',
+  'demo-cleanup': '/images/home-remodeling/home-remodel-shower-waterproofing.jpg',
+  'roofing': '/images/home-remodeling/living-room-fireplace.jpg',
+  'pressure-washing': '/images/home-remodeling/home-remodel-living-room-brick-wall.jpg',
+  'fence-installation': '/images/home-remodeling/living-room-fireplace.jpg',
+};
+
+// STRICT folder-to-service image mapping - each service only uses its own folder
+const serviceSliderImages: Record<string, string[]> = {
+  'painting': [
+    '/images/interior-painting/interior-painting-vaulted-living-room-after.jpeg',
+    '/images/interior-painting/interior-painting-bedroom-navy-blue-walls.jpeg',
+    '/images/interior-painting/interior-painting-bedroom-sage-green-walls-closet.jpeg',
+    '/images/interior-painting/interior-painting-bedroom-warm-beige-walls.jpeg',
+    '/images/interior-painting/interior-painting-commercial-hallway-gray-walls.jpeg',
+    '/images/interior-painting/interior-painting-restaurant-sage-green-wainscoting.jpeg',
+    '/images/interior-painting/interior-painting-restaurant-wainscoting-seating-area.jpeg',
+    '/images/interior-painting/interior-painting-room-light-blue-walls-crown-molding.jpeg',
+    '/images/interior-painting/interior-painting-room-sage-green-walls-white-trim.jpeg',
+    '/images/exterior-painting/exterior-painting-commercial-building-after.jpeg',
+    '/images/exterior-painting/exterior-painting-yellow-siding-home-backyard.jpeg',
+  ],
+  'flooring': [
+    '/images/tile/tile-floor-pattern.jpg',
+    '/images/tile/tile-floor-greek.jpg',
+  ],
+  'carpentry': [
+    '/images/trim-carpentry/trim-coffered-ceiling-stone-fireplace.jpg',
+    '/images/trim-carpentry/trim-custom-office-coffered-ceiling.jpg',
+    '/images/trim-carpentry/trim-coffered-ceiling-accent-wall.jpg',
+    '/images/trim-carpentry/trim-coffered-ceiling-recessed-lights.jpg',
+    '/images/trim-carpentry/trim-custom-pantry-wine-rack.jpg',
+    '/images/trim-carpentry/trim-wainscoting-coffered-office.jpg',
+    '/images/trim-carpentry/trim-wainscoting-staircase.jpg',
+    '/images/trim-carpentry/trim-geometric-accent-wall-navy.jpg',
+    '/images/trim-carpentry/trim-geometric-accent-wet-bar.jpg',
+    '/images/trim-carpentry/trim-board-batten-accent-wall-blue.jpg',
+    '/images/trim-carpentry/trim-diamond-accent-wall-pink.jpg',
+    '/images/trim-carpentry/trim-diamond-accent-wall-pink-2.jpg',
+  ],
+  'drywall': [
+    '/images/drywall/drywall-custom-ceiling-led-design.jpg',
+    '/images/drywall/drywall-arched-hallway-vaulted.jpg',
+    '/images/drywall/drywall-ceiling-floral-room-divider.jpg',
+    '/images/drywall/drywall-ornate-dome-ceiling.jpg',
+    '/images/drywall/drywall-ceiling-taping-finish.jpg',
+    '/images/drywall/drywall-wave-wall-detail.jpg',
+  ],
+  'tile-masonry': [
+    '/images/tile/tile-floor-pattern.jpg',
+    '/images/tile/tile-floor-greek.jpg',
+  ],
+  'remodeling': [
+    '/images/bathroom-remodel/bathroom-remodel-white.jpg',
+    '/images/bathroom-remodel/bathroom-marble-shower-gold-fixtures.jpg',
+    '/images/bathroom-remodel/bathroom-master-freestanding-tub.jpg',
+    '/images/bathroom-remodel/bathroom-black-tile-pendant-vanity.jpg',
+    '/images/bathroom-remodel/bathroom-modern-vanity-pendant-light.jpg',
+    '/images/bathroom-remodel/bathroom-luxury-herringbone-accent.jpg',
+    '/images/bathroom-remodel/bathroom-walkin-shower-marble-shelves.jpg',
+    '/images/bathroom-remodel/bathroom-master-calacatta-shower.jpg',
+    '/images/bathroom-remodel/bathroom-gray-marble-shower-niche.jpg',
+    '/images/bathroom-remodel/bathroom-modern-glass-tile-shower.jpg',
+    '/images/bathroom-remodel/bathroom-luxury-stone-walkin-shower.jpg',
+    '/images/bathroom-remodel/bathroom-black-star-tile-shower.jpg',
+    '/images/bathroom-remodel/bathroom-black-herringbone-glass-tub.jpg',
+    '/images/bathroom-remodel/bathroom-striped-penny-tile-tub.jpg',
+    '/images/bathroom-remodel/bathroom-vertical-tile-glass-door.jpg',
+    '/images/bathroom-remodel/bathroom-vertical-tile-niche-light.jpg',
+    '/images/bathroom-remodel/bathroom-shower-bench-mosaic-floor.jpg',
+    '/images/bathroom-remodel/bathroom-shower-tile-niche-window.jpg',
+    '/images/bathroom-remodel/bathroom-gray-tile-shower-bench.jpg',
+    '/images/bathroom-remodel/bathroom-modern-vanity-glass-shower.jpg',
+    '/images/bathroom-remodel/bathroom-natural-stone-shower-install.jpg',
+    '/images/bathroom-remodel/bathroom-herringbone.jpg',
+    '/images/bathroom-remodel/bathroom-marble-shower.jpg',
+    '/images/bathroom-remodel/marble-shower-bench.jpg',
+    '/images/bathroom-remodel/shower-glass-door.jpg',
+    '/images/bathroom-remodel/shower-dark-tile.jpg',
+    '/images/bathroom-remodel/shower-gray-tile.jpg',
+    '/images/bathroom-remodel/shower-marble-progress.jpg',
+    '/images/bathroom-remodel/bathroom-marble-fireplace-builtins.jpg',
+    '/images/home-remodeling/living-room-fireplace.jpg',
+    '/images/home-remodeling/living-room-renovation.jpg',
+    '/images/home-remodeling/home-remodel-living-room-brick-wall.jpg',
+    '/images/home-remodeling/home-remodel-shower-waterproofing.jpg',
+    '/images/home-remodeling/kitchen-remodel/kitchen-remodel-black-cabinets-island.jpg',
+    '/images/home-remodeling/kitchen-remodel/kitchen-modern-wet-bar-marble.jpg',
+  ],
 };
 
 export default async function ServicePage({ params }: PageProps) {
@@ -58,7 +141,8 @@ export default async function ServicePage({ params }: PageProps) {
   }
 
   const otherServices = servicesData.filter((s) => s.id !== service.id).slice(0, 6);
-  const heroImage = serviceImages[service.slug] || '/images/living-room-fireplace.jpg';
+  const heroImage = serviceImages[service.slug] || '/images/home-remodeling/living-room-fireplace.jpg';
+  const sliderImages = serviceSliderImages[service.slug] || [];
 
   return (
     <>
@@ -197,8 +281,29 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Image Slider Section - Only for services with images */}
+        {sliderImages.length > 0 && (
+          <section className="py-20 bg-gray-50">
+            <div className="container-max px-4 md:px-6">
+              <div className="text-center mb-12">
+                <span className="text-primary font-bold text-sm uppercase tracking-wider">Our Portfolio</span>
+                <h2 className="text-4xl md:text-5xl font-black text-secondary mt-2">
+                  {service.category} Projects
+                </h2>
+                <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                  Browse through our completed {service.category.toLowerCase()} projects to see the quality of our work.
+                </p>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <ImageSlider images={sliderImages} alt={service.category} />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Process */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="container-max px-4 md:px-6">
             <div className="text-center mb-16">
               <span className="text-primary font-bold text-sm uppercase tracking-wider">How It Works</span>
@@ -228,27 +333,9 @@ export default async function ServicePage({ params }: PageProps) {
         </section>
 
         {/* Why Us Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="container-max px-4 md:px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image src="/images/shower-marble-progress.jpg" alt="Our work" fill className="object-cover" />
-                  </div>
-                  <div className="relative h-64 rounded-2xl overflow-hidden">
-                    <Image src="/images/bathroom-marble-shower.jpg" alt="Our work" fill className="object-cover" />
-                  </div>
-                </div>
-                <div className="space-y-4 pt-8">
-                  <div className="relative h-64 rounded-2xl overflow-hidden">
-                    <Image src="/images/tile-floor-greek.jpg" alt="Our work" fill className="object-cover" />
-                  </div>
-                  <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image src="/images/shower-gray-tile.jpg" alt="Our work" fill className="object-cover" />
-                  </div>
-                </div>
-              </div>
+            <div className="max-w-3xl mx-auto">
               <div>
                 <span className="text-primary font-bold text-sm uppercase tracking-wider">Why Prenga</span>
                 <h2 className="text-4xl md:text-5xl font-black text-secondary mt-2 mb-6">
@@ -285,7 +372,7 @@ export default async function ServicePage({ params }: PageProps) {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="container-max px-4 md:px-6">
             <div className="text-center mb-16">
               <span className="text-primary font-bold text-sm uppercase tracking-wider">FAQ</span>
@@ -299,7 +386,7 @@ export default async function ServicePage({ params }: PageProps) {
                 { q: 'Are you licensed and insured?', a: 'Absolutely. Prenga Construction is fully licensed and insured, giving you complete peace of mind on every project.' },
                 { q: 'How do I get started?', a: 'Simply give us a call or fill out our contact form. We\'ll schedule a convenient time to visit and discuss your project needs.' },
               ].map((item, i) => (
-                <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
+                <div key={i} className="bg-gray-50 rounded-xl p-6 shadow-sm">
                   <h3 className="text-lg font-bold text-secondary mb-2">{item.q}</h3>
                   <p className="text-gray-600">{item.a}</p>
                 </div>

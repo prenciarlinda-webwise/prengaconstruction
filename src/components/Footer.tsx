@@ -51,12 +51,12 @@ export default function Footer() {
             <h4 className="text-white font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
               {[
+                { name: 'Remodeling', slug: 'remodeling' },
                 { name: 'Painting', slug: 'painting' },
-                { name: 'Bathroom Remodeling', slug: 'bathroom-remodeling' },
-                { name: 'Kitchen Remodeling', slug: 'kitchen-remodeling' },
                 { name: 'Flooring', slug: 'flooring' },
                 { name: 'Tile Work', slug: 'tile-masonry' },
                 { name: 'Carpentry', slug: 'carpentry' },
+                { name: 'Drywall', slug: 'drywall' },
               ].map((service) => (
                 <li key={service.slug}>
                   <Link

@@ -47,7 +47,7 @@ export default function ContactPage() {
         {/* Hero */}
         <section className="relative pt-24 pb-20 overflow-hidden">
           <div className="absolute inset-0">
-            <Image src="/images/shower-glass-door.jpg" alt="Contact us" fill className="object-cover" />
+            <Image src="/images/bathroom-remodel/shower-glass-door.jpg" alt="Contact us" fill className="object-cover" />
             <div className="absolute inset-0 bg-secondary/85" />
           </div>
           <div className="relative z-10 container-max px-4 md:px-6 pt-16">
@@ -329,18 +329,18 @@ export default function ContactPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image src="/images/bathroom-work-1.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/bathroom-remodel/bathroom-walkin-shower-marble-shelves.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden">
-                    <Image src="/images/shower-marble-progress.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/bathroom-remodel/shower-marble-progress.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="relative h-64 rounded-2xl overflow-hidden">
-                    <Image src="/images/project-4.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/home-remodeling/home-remodel-shower-waterproofing.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                   <div className="relative h-48 rounded-2xl overflow-hidden">
-                    <Image src="/images/bathroom-work-2.jpg" alt="Our work" fill className="object-cover" />
+                    <Image src="/images/bathroom-remodel/bathroom-marble-shower-gold-fixtures.jpg" alt="Our work" fill className="object-cover" />
                   </div>
                 </div>
               </div>
